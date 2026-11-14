@@ -3,9 +3,6 @@ const formulario = document.getElementById("formLogin");
 const mensaje = document.getElementById("mensaje");
 const boton = document.getElementById("btnEntrar");
 
-// Creamos la conexión solo cuando tengamos los datos de Supabase.
-let supabase = null;
-
 if (
   window.supabase &&
   SUPABASE_URL.startsWith("https://") &&
