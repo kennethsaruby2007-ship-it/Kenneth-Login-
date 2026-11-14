@@ -1,3 +1,4 @@
+alert("El archivo script.js se está ejecutando");
 const formulario = document.getElementById("formLogin");
 const mensaje = document.getElementById("mensaje");
 const boton = document.getElementById("btnEntrar");
