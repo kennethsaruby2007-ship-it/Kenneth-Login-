@@ -15,6 +15,7 @@ if (
 
 formulario.addEventListener("submit", async function(evento) {
   evento.preventDefault();
+  alert("JavaScript está funcionando");
 
   const usuario = document.getElementById("usuario").value.trim();
   const contrasena = document.getElementById("contrasena").value;
