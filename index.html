@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Kenneth Brito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor">
+    <section class="tarjeta">
+      <div class="icono">KB</div>
+      <h1>Iniciar sesión</h1>
+      <p class="subtitulo">Bienvenido al sistema de Kenneth Brito</p>
+
+      <form id="formLogin">
+        <label for="usuario">Usuario</label>
+        <input type="email" id="usuario" placeholder="Ingresa tu correo" autocomplete="username" required>
+
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" placeholder="Ingresa tu contraseña" autocomplete="current-password" required>
+
+        <button type="submit" id="btnEntrar">Ingresar</button>
+        <p id="mensaje" role="status"></p>
+      </form>
+      <p class="nota">Actividad práctica V · Sistemas</p>
+    </section>
+  </main>
+
+  <!-- Librería oficial de Supabase para JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenida | Kenneth Brito</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor">
+    <section class="tarjeta">
+      <div class="icono">KB</div>
+      <h1>¡Bienvenido!</h1>
+      <p class="subtitulo">Has iniciado sesión correctamente.</p>
+      <button onclick="cerrarSesion()">Cerrar sesión</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script>
+    async function cerrarSesion() {
+      if (window.supabase && SUPABASE_URL.startsWith("https://") &&
+          SUPABASE_ANON_KEY !== "PEGA_AQUI_LA_CLAVE_PUBLICA") {
+        const cliente = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        await cliente.auth.signOut();
+      }
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
