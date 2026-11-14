@@ -1,4 +1,4 @@
-alert("El archivo script.js se está ejecutando");
+
 const formulario = document.getElementById("formLogin");
 const mensaje = document.getElementById("mensaje");
 const boton = document.getElementById("btnEntrar");
@@ -13,11 +13,19 @@ if (
 
 formulario.addEventListener("submit", async function(evento) {
   evento.preventDefault();
-  alert("JavaScript está funcionando");
+  
 
   const usuario = document.getElementById("usuario").value.trim();
   const contrasena = document.getElementById("contrasena").value;
-
+  const { data, error } = await sb.functions.invoke(
+            "login-aunar",
+            {
+                body: {
+                    usuario: usuario,
+                    password: password
+                }
+            }
+        );
   mensaje.textContent = "";
   mensaje.className = "";
 
